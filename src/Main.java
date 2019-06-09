@@ -7,7 +7,7 @@ public class Main {
 		encrypt(message, key);
 		
 	}
-
+	// hack
 	static void encrypt(String message, String key) {
 		key = key.toLowerCase();
 		if (!key.matches("\\p{Alpha}+")) {
