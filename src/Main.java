@@ -3,14 +3,17 @@ public class Main {
 	public static void main(String[] args) {
 		
 		String message = "Hallo liebe Welt, das ist 1 verschlüsselter Text.";
-		String key = "myKey";
+		String key = "abc";
 		encrypt(message, key);
 		
 	}
 	// hack
 	static void encrypt(String message, String key) {
 		key = key.toLowerCase();
-		if (!key.matches("\\p{Alpha}+")) {
+		if (key.length()<1 || message.length()<1) {
+			System.out.println("Key/Text dürfen nicht leer sein");
+			return;
+		} if (!key.matches("\\p{Alpha}+")) {
 			System.out.println("Key darf nur aus Buchstaben bestehen");
 			return;
 		}
